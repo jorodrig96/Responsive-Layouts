@@ -1,0 +1,62 @@
+:root { /*assignging colors to variables*/
+    --pale-sage: #BFF4CB;
+    --sage: #84A98C;
+    --dusty-emerald: #52796f;
+    --deep-emerald: #354F52;
+    --night-forest: #2F3E46;
+}  
+
+* {
+    border: 1px solid teal; /*just heads up, always add borders when first editing css to know where each element is */
+}                  
+
+
+body {
+    margin: 0;
+    font-family: sans-serif;
+    text-align: center;
+    background-color: var(--night-forest);
+    color: var(--pale-sage);
+  }                  
+
+.container {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column; /* alows for elements to be stacked on top of each other */
+    justify-content: space-between;
+}
+
+main {
+    min-height: 60vh;
+    flex-grow: 5;
+}
+
+aside, nav {
+    background-color: var(--deep-emerald);
+    flex-grow: 2;
+}
+
+footer, header {
+    background-color: var(--sage);
+    flex-grow: 1;
+}
+
+ul {
+    list-style-type: none;
+}
+   
+
+@media (min-width: 600px) { /* css will use this query when the device width is minimum 600px. other wise it will give a view for mobdile devices*/
+    .container {
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+    main {
+      max-width: 60%;
+    }
+    header, footer {
+      width: 100%;
+    }
+  }                                  
+                
+
